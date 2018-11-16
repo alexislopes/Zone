@@ -1,4 +1,4 @@
-package zone.com.br.zone;
+package zone.com.br.test;
 
 import org.junit.Test;
 

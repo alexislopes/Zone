@@ -1,7 +1,9 @@
-package zone.com.br.zone;
+package zone.com.br.src.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import zone.com.br.src.R;
 
 public class Principal extends AppCompatActivity {
 

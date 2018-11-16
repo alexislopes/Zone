@@ -1,4 +1,4 @@
-package zone.com.br.zone;
+package zone.com.br.testAndroid;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
