@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Zone</string>
+    <string name="Entrar">Entrar</string>
+    <string name="Usuário">Usuário</string>
+    <string name="Cadastrar">Cadastrar</string>
+    <string name="Senha">Senha</string>
 </resources>
