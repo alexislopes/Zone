@@ -4,4 +4,7 @@
     <string name="Usuário">Usuário</string>
     <string name="Cadastrar">Cadastrar</string>
     <string name="Senha">Senha</string>
+    <string name="Nome">Nome</string>
+    <string name="Telefone">Telefone</string>
+    <string name="Endereco">Endereco</string>
 </resources>
