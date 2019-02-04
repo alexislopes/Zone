@@ -1,19 +1,45 @@
 package zone.com.br.src.model;
 
+
 public class Veiculo {
-    private Long id;
+
+    private String marca;
     private String modelo;
-    private Long ano;
+    private String ano;
     private String cor;
     private String placa;
     private String detalhes;
 
-    public Long getId() {
-        return id;
+    public Veiculo() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Veiculo(String marca, String modelo, String ano, String cor, String placa, String detalhes) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+        this.placa = placa;
+        this.detalhes = detalhes;
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", ano='" + ano + '\'' +
+                ", cor='" + cor + '\'' +
+                ", placa='" + placa + '\'' +
+                ", detalhes='" + detalhes + '\'' +
+                '}';
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getModelo() {
@@ -24,20 +50,12 @@ public class Veiculo {
         this.modelo = modelo;
     }
 
-    public Long getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(Long ano) {
+    public void setAno(String ano) {
         this.ano = ano;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
     }
 
     public String getPlaca() {
@@ -54,5 +72,13 @@ public class Veiculo {
 
     public void setDetalhes(String detalhes) {
         this.detalhes = detalhes;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 }

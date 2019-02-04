@@ -4,35 +4,53 @@ import com.google.gson.Gson;
 
 import java.util.List;
 
+
 public class Usuario {
-    private Long id;
+
+    private String _id;
     private String nome;
-    private String usuario;
+    private String sobrenome;
+    private String username;
     private String senha;
-    private String endereco;
-    private List<Long> telefone;
+    private String tipo;
+    private Veiculo veiculo;
+    private Contato contato;
 
-    Usuario(){}
 
-    public Usuario(String usuario, String senha){
-        this.usuario = usuario;
-        this.senha = senha;
+    public Usuario() {
     }
 
-    public Usuario(String nome, String usuario, String senha, String endereco, List<Long> telefone) {
+    public Usuario(String nome, String sobrenome) {
         this.nome = nome;
-        this.usuario = usuario;
-        this.senha = senha;
-        this.endereco = endereco;
-        this.telefone = telefone;
+        this.sobrenome = sobrenome;
     }
 
-    public Long getId() {
-        return id;
+    public Usuario(String _id, String nome, String sobrenome) {
+        this._id = _id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "_id='" + _id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", username='" + username + '\'' +
+                ", senha='" + senha + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", veiculo=" + veiculo +
+                ", contato=" + contato +
+                '}';
+    }
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
     public String getNome() {
@@ -43,12 +61,20 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getSenha() {
@@ -59,29 +85,28 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public List<Long> getTelefone() {
-        return telefone;
+    public Veiculo getVeiculo() {
+        return veiculo;
     }
 
-    public void setTelefone(List<Long> telefone) {
-        this.telefone = telefone;
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
 
-    public String toJson(){
-        Gson json = new Gson();
-        return json.toJson(this);
+    public Contato getContato() {
+        return contato;
     }
 
-    public Usuario fromJson(String usuarioJson){
-        Gson json = new Gson();
-        return json.fromJson(usuarioJson, Usuario.class);
+    public void setContato(Contato contato) {
+        this.contato = contato;
     }
+
 }

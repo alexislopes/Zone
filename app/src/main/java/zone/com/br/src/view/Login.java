@@ -16,17 +16,15 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 
 import zone.com.br.src.R;
-import zone.com.br.src.controler.servico.ClienteWebServices;
 import zone.com.br.src.model.Usuario;
 
-public class Login extends AppCompatActivity implements Runnable{
+public class Login extends AppCompatActivity {
 
     EditText edtUsuario, edtSenha;
     Button btnEntrar, btnCadastrar;
 
     Handler handler = new Handler();
     ProgressDialog janela;
-    Thread tarefa;
 
     Usuario usuario;
 
@@ -42,9 +40,6 @@ public class Login extends AppCompatActivity implements Runnable{
                 janela = new ProgressDialog(Login.this);
                 janela.setMessage("Verificando dados...");
                 janela.show();
-
-                tarefa = new Thread(Login.this);
-                tarefa.start();
             }
         });
 
@@ -64,34 +59,4 @@ public class Login extends AppCompatActivity implements Runnable{
         btnCadastrar = findViewById(R.id.btnCadastrar);
     }
 
-    @Override
-    public void run() {
-        ClienteWebServices clienteWebServices = new ClienteWebServices();
-        usuario = new Usuario(edtUsuario.getText().toString(), edtSenha.getText().toString());
-
-        final String usuarioJson = usuario.toJson();
-
-
-        try {
-            final boolean resposta = clienteWebServices.verificaUsuario(usuarioJson);
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
-                    if(resposta) {
-                        Intent mudaTela = new Intent(Login.this, Principal.class);
-                        mudaTela.putExtra("usuario", usuarioJson);
-                        startActivity(mudaTela);
-                    } else {
-                        Toast.makeText(Login.this, "Login ou senha inválidos", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-            });
-        } catch (IOException | XmlPullParserException e) {
-            e.printStackTrace();
-        } finally {
-            janela.dismiss();
-        }
-
-    }
 }
