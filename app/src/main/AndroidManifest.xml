@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".view.Cadastro" />
+        <activity android:name=".view.Usuarios" />
     </application>
 
 </manifest>

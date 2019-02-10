@@ -20,10 +20,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nome, String sobrenome) {
+    public Usuario(String nome, String username) {
         this.nome = nome;
-        this.sobrenome = sobrenome;
+        this.username = username;
     }
+
+
 
     public Usuario(String _id, String nome, String sobrenome) {
         this._id = _id;

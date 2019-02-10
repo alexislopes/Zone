@@ -7,4 +7,14 @@
     <string name="Nome">Nome</string>
     <string name="Telefone">Telefone</string>
     <string name="Endereco">Endereco</string>
+    <string name="Home">home page</string>
+    <string name="Users">users page</string>
+    <string name="Chat">chat page</string>
+    <string name="descubra">descubra</string>
+    <string name="inicio">inicio</string>
+    <string name="chat">chat</string>
+    <string name="profilepic">imagem de perfil do usuráio</string>
+    <string name="ver">ver</string>
+    <string name="motorista">Sou um motorista</string>
+    <string name="sobreoveiculo">Sobre o veículo</string>
 </resources>
