@@ -32,6 +32,9 @@ public class Principal extends AppCompatActivity {
 
     Button usuarios;
 
+    List<Usuarios> listausuarios;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,17 +42,6 @@ public class Principal extends AppCompatActivity {
 
         usuarios = findViewById(R.id.imgusuarios);
 
-        usuarios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent muda = new Intent(getApplicationContext(), Usuarios.class);
-                startActivity(muda);
-            }
-        });
-
-
-
-        /*
         RetrofitConfig retrofitConfig = new RetrofitConfig();
 
         Retrofit retrofit = retrofitConfig.getRetrofit();
@@ -90,7 +82,14 @@ public class Principal extends AppCompatActivity {
                 Log.d("ERROOOOOO: ", t.getMessage());
             }
         });
-        */
+
+        usuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent muda = new Intent(getApplicationContext(), Usuarios.class);
+                startActivity(muda);
+            }
+        });
 
     }
 }

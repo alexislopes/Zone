@@ -62,7 +62,7 @@ public class Usuarios extends AppCompatActivity {
             }
         });*/
 
-        enche();
+        //enche();
 
         UsuarioAdapter adapter = new UsuarioAdapter(usuarios);
         recyclerUsuario.setAdapter(adapter);

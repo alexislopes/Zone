@@ -47,11 +47,11 @@ public class Cadastro extends AppCompatActivity {
     }
 
     public void conectaJavaXML(){
-        edtNome = findViewById(R.id.edtNome);
+        edtNome = findViewById(R.id.textNome);
         edtUsuario = findViewById(R.id.edtUsuario);
         edtSenha = findViewById(R.id.edtSenha);
-        edtTelefone = findViewById(R.id.edtTelefone);
-        edtEndereco = findViewById(R.id.edtEndereco);
+        edtTelefone = findViewById(R.id.textTelefone);
+        edtEndereco = findViewById(R.id.textEndereco);
 
         btnCadastrar = findViewById(R.id.btnCadastrar);
     }
