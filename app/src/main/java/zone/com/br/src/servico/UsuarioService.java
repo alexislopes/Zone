@@ -1,9 +1,8 @@
-package zone.com.br.src.controler.servico;
+package zone.com.br.src.servico;
 
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import zone.com.br.src.model.Usuario;

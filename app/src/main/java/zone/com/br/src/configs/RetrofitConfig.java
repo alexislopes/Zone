@@ -5,8 +5,7 @@ import com.google.gson.GsonBuilder;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.jackson.JacksonConverterFactory;
-import zone.com.br.src.controler.servico.UsuarioService;
+import zone.com.br.src.servico.UsuarioService;
 
 public class RetrofitConfig {
 
@@ -15,7 +14,7 @@ public class RetrofitConfig {
     public RetrofitConfig() {
         Gson gson = new GsonBuilder().setLenient().create();
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.15.11:8080/api/")
+                .baseUrl("http://new-zone-rest.herokuapp.com/api/usuario")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }

@@ -5,20 +5,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 import zone.com.br.src.R;
 import zone.com.br.src.adapter.UsuarioAdapter;
-import zone.com.br.src.configs.RetrofitConfig;
-import zone.com.br.src.controler.servico.UsuarioService;
 import zone.com.br.src.model.Usuario;
 
 public class Usuarios extends AppCompatActivity {
