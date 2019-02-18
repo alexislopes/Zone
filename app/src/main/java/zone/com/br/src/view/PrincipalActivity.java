@@ -15,9 +15,9 @@ import zone.com.br.src.R;
 import zone.com.br.src.model.Usuario;
 import zone.com.br.src.servico.UsuarioServicoCli;
 
-public class Principal extends AppCompatActivity {
+public class PrincipalActivity extends AppCompatActivity {
 
-    private static final String TAG = "Principal ";
+    private static final String TAG = "PrincipalActivity ";
 
     EditText id;
     TextView resposta;
