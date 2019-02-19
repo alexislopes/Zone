@@ -21,7 +21,11 @@ public class UsuarioServicoCli {
 
     private List<Usuario> usuarios;
 
+    private List<String> usernames;
+
     private Usuario usuario;
+
+    private Boolean logado;
 
     public List<Usuario> achaTodosUsuarios(){
         //acha todos usuarios
@@ -62,10 +66,47 @@ public class UsuarioServicoCli {
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
+                usuario = null;
                 Log.d("ERROOOOOO: ", t.getMessage());
             }
         });
 
         return usuario;
+    }
+
+    public List<String> achaTodosUsernames(){
+        Call<List<String>> callUsernames = usuarioService.achaTodosUsernames();
+
+        callUsernames.enqueue(new Callback<List<String>>() {
+            @Override
+            public void onResponse(Call<List<String>> call, Response<List<String>> response) {
+                usernames = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<List<String>> call, Throwable t) {
+                usernames = null;
+            }
+        });
+
+        return usernames;
+    }
+
+    public Boolean login(String username, String senha){
+        Call<Boolean>  callLogin = usuarioService.login(username, senha);
+
+        callLogin.enqueue(new Callback<Boolean>() {
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                logado = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+
+            }
+        });
+
+        return logado;
     }
 }

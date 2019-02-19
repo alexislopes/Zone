@@ -14,7 +14,7 @@ public class RetrofitConfig {
     public RetrofitConfig() {
         Gson gson = new GsonBuilder().setLenient().create();
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://new-zone-rest.herokuapp.com/api/usuario")
+                .baseUrl("http://new-zone-rest.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }

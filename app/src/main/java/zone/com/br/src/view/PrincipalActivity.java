@@ -23,7 +23,7 @@ public class PrincipalActivity extends AppCompatActivity {
     TextView resposta;
     Button btnBuscarUser;
 
-    Button usuarios;
+    Button usuarios, login;
 
     List<Usuario> listausuarios;
 
@@ -34,6 +34,7 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         usuarios = findViewById(R.id.imgusuarios);
+        login = findViewById(R.id.button2);
 
 
         listausuarios = new UsuarioServicoCli().achaTodosUsuarios();
@@ -45,6 +46,14 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent muda = new Intent(getApplicationContext(), Usuarios.class);
+                startActivity(muda);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent muda = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(muda);
             }
         });
